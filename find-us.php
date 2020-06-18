@@ -23,6 +23,7 @@
     </head>
     <body>
         <?php include ($_SERVER['DOCUMENT_ROOT'] . '/JamesFineSpirit/includes/find-us-header.inc.php'); ?>
+            <!-- Main Section -->
         <main id="main" role="main">
             <section class="contactInfo">
                 <div class="contactInfo__background grid width">

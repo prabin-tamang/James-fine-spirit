@@ -1,14 +1,18 @@
 <header class="header" role="banner">
+       <!-- Pressing Tab skips to main content -->
     <a href="#main" class="c-skip-to">Skip to main content</a> 
     <div class="overlay has-fade"></div>
     <div class="topBar">
+            <!-- Javascript store open or close -->
         <div class="topBar__container width">
             <p id="checkDate">Welcome! we're glad you're here.</p>
         </div>
-    </div>
+    </div> 
+       <!-- Navigation bar -->
     <div class="navigation">
         <div class="navigation__container flex flex-jc-sb flex-ai-c width">
               <a href="index.php"><svg xmlns="http://www.w3.org/2000/svg" width="202" height="36" viewBox="0 0 202 36"><text transform="translate(1)" fill="#fff" font-size="30" font-family="Patron-Medium, Patron" font-weight="500" letter-spacing="-0.05em"><tspan x="-0.304" y="29">James</tspan><tspan y="29" fill="#fcbe00">fine</tspan><tspan y="29">spirit</tspan></text></svg></a>   
+                 <!-- Dekstop navigation -->
             <nav class="navigation__desktopNav" role="navigation">
                 <ul>
                     <li class="navigation__link current"><a href="index.php">Home</a><span>What's in our home</span></li>
@@ -17,6 +21,7 @@
                     <li class="navigation__link"><a href="gallery.php">Gallery</a><span>We love to enjoy</span></li>
                 </ul>
             </nav>
+                <!-- Mobile Nav -->
             <div class="navigation__menu" id="btnHamburger">
                 <span></span>
                 <span></span>
@@ -34,6 +39,7 @@
             </nav>
         </div>
     </div>
+        <!-- Hero intro-->
     <div class="hero">
         <div class="hero__content width">
             <h1><span>Great tasting,</span> 

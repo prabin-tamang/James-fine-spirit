@@ -1,4 +1,7 @@
 @import "variables";
+/* ==========================================================================
+   Header
+   ========================================================================== */
 .header {
     background: url(../images/barrel.jpg) no-repeat;
     background-size: cover;
@@ -64,7 +67,7 @@
         position: relative;
         padding: 1em 1.5em;
         background: $light-black;
-        // hide desktop nav 
+    /* Hide Desktop nav */
         &__desktopNav {
             display: none;
         }
@@ -84,14 +87,11 @@
         }
     }
     .hero {
-        // background-size: 250%;
         padding: 4em 1.5em;
         padding-bottom: 8em;
         position: relative;
         &__content {
-            // padding-bottom: 2em;
             h1 {
-                // font-size: 1.64em;
                 color: $white;
                 letter-spacing: -.20px;
                 margin-bottom: .2em;
@@ -124,22 +124,18 @@
         }
         &__info {
             position: absolute;
-            // border-radius: 10px;
             bottom: -120px;
             left: 0;
             background: $secondary-black;
             color: $white;
             padding: 1.5em 2em;
             width: 100%;
-            // margin: 0 1.5em;
-            // border-radius: 10px;
             filter: drop-shadow(0px 6px 11px rgba(138, 138, 138, 0.161));
         }
         &__container {
             display: grid;
             place-items: center;
             grid-template-columns: 1fr 1fr;
-            // grid-gap: 4em;
             font-size: .65em;
             grid-gap: 3em;
             text-align: center;

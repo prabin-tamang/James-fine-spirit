@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Colors */
+/* ==========================================================================
+   Resets
+   ========================================================================== */
 @font-face {
   font-family: 'Patron';
   src: url("../fonts/Patron_Medium.otf");
@@ -54,6 +58,10 @@ img {
   display: block;
 }
 
+/* ==========================================================================
+  Helper Classes
+   ========================================================================== */
+/* Flex */
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,6 +86,7 @@ img {
           align-items: center;
 }
 
+/* Grid */
 .grid {
   display: -ms-grid;
   display: grid;
@@ -95,6 +104,7 @@ img {
   display: none;
 }
 
+/* Current */
 .current {
   font-weight: 700;
 }
@@ -111,6 +121,10 @@ img {
   background-color: #FCBE00;
 }
 
+/* Colors */
+/* ==========================================================================
+   Animations for Hamburger menu
+   ========================================================================== */
 .has-fade {
   visibility: hidden;
 }
@@ -185,6 +199,10 @@ img {
           animation: fade-out 200ms ease-in-out forwards;
 }
 
+/* Colors */
+/* ==========================================================================
+   Header
+   ========================================================================== */
 .header {
   background: url(../images/barrel.jpg) no-repeat;
   background-size: cover;
@@ -262,6 +280,7 @@ img {
   position: relative;
   padding: 1em 1.5em;
   background: #202020;
+  /* Hide Desktop nav */
 }
 
 .header .navigation__desktopNav {
@@ -379,6 +398,10 @@ img {
   margin-bottom: .5em;
 }
 
+/* Colors */
+/* ==========================================================================
+   Main
+   ========================================================================== */
 main .products {
   background: #202020;
   padding: 0 1.5em;
@@ -588,6 +611,7 @@ main .newsletter form button {
   cursor: pointer;
 }
 
+/* Products main page */
 .delivery {
   background-color: #FCBE00;
   text-align: center;
@@ -723,6 +747,7 @@ main .newsletter form button {
   transition: .5s ease;
   text-align: center;
   cursor: pointer;
+  /* Desktop overlay */
 }
 
 .twoCol .productList__overlay__overlay:hover {
@@ -798,6 +823,7 @@ main .newsletter form button {
   cursor: pointer;
 }
 
+/* Find Us Page */
 .contactInfo {
   padding: 0;
   background: #202020;
@@ -887,6 +913,7 @@ main .newsletter form button {
   margin-bottom: 2em;
 }
 
+/* Gallery Page*/
 .gallery {
   background: #202020;
 }
@@ -901,6 +928,10 @@ main .newsletter form button {
      object-fit: cover;
 }
 
+/* Colors */
+/* ==========================================================================
+  Footer
+   ========================================================================== */
 .footer h3 {
   color: #FFFFFF;
   margin-bottom: .5em;
@@ -950,6 +981,19 @@ main .newsletter form button {
   margin-right: .8em;
 }
 
+/* Colors */
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/**
+ * Styles
+ * small - 464px - 29em
+ * medium - 640px - 40em
+* tablets - 768px - 48em
+ * large - 1024px - 64em
+ * x large - 1400px - 87.5em
+ * x x large - 2000px - 125em
+ */
 h1 {
   font-size: 1.383em;
   -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
@@ -964,6 +1008,8 @@ h3 {
   font-size: 1.138em;
 }
 
+/* Small
+   ========================================================================== */
 @media screen and (min-width: 29em) {
   main .products__container {
     -ms-grid-columns: (1fr)[2];
@@ -974,6 +1020,8 @@ h3 {
   }
 }
 
+/* Medium 
+   ========================================================================== */
 @media screen and (min-width: 40em) {
   h1 {
     font-size: 1.802em;
@@ -1042,6 +1090,7 @@ h3 {
         grid-template-rows: none;
     padding-bottom: 4em;
   }
+  /* Product Page*/
   .twoCol .newsletter__background {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -1056,6 +1105,7 @@ h3 {
         grid-template-columns: repeat(3, 1fr);
     grid-gap: 4em;
   }
+  /* Find Us page */
   .contactInfo__background {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -1072,6 +1122,8 @@ h3 {
   }
 }
 
+/* Tablets
+   ========================================================================== */
 @media screen and (min-width: 48em) {
   .width {
     max-width: 680px;
@@ -1104,7 +1156,10 @@ h3 {
   }
 }
 
+/* Desktop
+   ========================================================================== */
 @media screen and (min-width: 64em) {
+  /* Class to change width on different devices */
   .width {
     width: 100%;
     max-width: 920px;
@@ -1112,7 +1167,10 @@ h3 {
   }
 }
 
+/* Desktop- large
+   ========================================================================== */
 @media screen and (min-width: 87.5em) {
+  /* Skip to content when pressing TAB for accesbility */
   .c-skip-to {
     display: block;
   }
@@ -1130,6 +1188,7 @@ h3 {
     max-width: 1000px;
     margin: 0 auto;
   }
+  /* Header */
   .header {
     background: url(../images/barrel.jpg) no-repeat;
     background-size: cover;
@@ -1252,6 +1311,7 @@ h3 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
   }
+  /* Main  */
   main .products {
     padding: 0;
     padding-top: 4em;
@@ -1298,6 +1358,7 @@ h3 {
   main .newsletter__signUp {
     padding: 0;
   }
+  /* Footer */
   .footer {
     background: #292929;
   }
@@ -1327,6 +1388,7 @@ h3 {
     font-size: .875em;
     padding: 0;
   }
+  /* Products Page */
   .twoCol__background {
     display: -ms-grid;
     display: grid;
@@ -1343,6 +1405,7 @@ h3 {
   .twoCol .newsletter__signUp {
     padding: 0;
   }
+  /* Find Us Page */
   .contactInfo__background {
     padding: 4em 0;
     display: -ms-grid;
@@ -1376,6 +1439,7 @@ h3 {
     -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+  /* Gallery Page */
   .gallery {
     padding: 0;
   }
@@ -1497,6 +1561,8 @@ h3 {
   }
 }
 
+/* Desktop- x large
+   ========================================================================== */
 @media screen and (min-width: 125em) {
   h1 {
     font-size: 3.052em;
@@ -1524,6 +1590,7 @@ h3 {
   }
 }
 
+/* Colors */
 .error {
   background: url(../images/barrel.jpg);
   background-size: cover;

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Colors */
+/* ==========================================================================
+   Main
+   ========================================================================== */
 main .products {
   background: #202020;
   padding: 0 1.5em;
@@ -208,6 +212,7 @@ main .newsletter form button {
   cursor: pointer;
 }
 
+/* Products main page */
 .delivery {
   background-color: #FCBE00;
   text-align: center;
@@ -343,6 +348,7 @@ main .newsletter form button {
   transition: .5s ease;
   text-align: center;
   cursor: pointer;
+  /* Desktop overlay */
 }
 
 .twoCol .productList__overlay__overlay:hover {
@@ -418,6 +424,7 @@ main .newsletter form button {
   cursor: pointer;
 }
 
+/* Find Us Page */
 .contactInfo {
   padding: 0;
   background: #202020;
@@ -507,6 +514,7 @@ main .newsletter form button {
   margin-bottom: 2em;
 }
 
+/* Gallery Page*/
 .gallery {
   background: #202020;
 }

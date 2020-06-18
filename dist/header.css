@@ -1,3 +1,7 @@
+/* Colors */
+/* ==========================================================================
+   Header
+   ========================================================================== */
 .header {
   background: url(../images/barrel.jpg) no-repeat;
   background-size: cover;
@@ -75,6 +79,7 @@
   position: relative;
   padding: 1em 1.5em;
   background: #202020;
+  /* Hide Desktop nav */
 }
 
 .header .navigation__desktopNav {

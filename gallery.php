@@ -31,6 +31,7 @@
     </head>
     <body>
         <?php include ($_SERVER['DOCUMENT_ROOT'] . '/JamesFineSpirit/includes/gallery-header.inc.php'); ?>
+            <!-- Main Section -->
         <main id="main" role="main">
             <section class="gallery">
                 <div class="gallery__container grid">

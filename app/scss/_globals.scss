@@ -1,5 +1,8 @@
-// reset
 @import "variables";
+/* ==========================================================================
+   Resets
+   ========================================================================== */
+
 @font-face {
     font-family: 'Patron';
     src: url('../fonts/Patron_Medium.otf');
@@ -56,7 +59,10 @@ img {
     display: block;
 }
 
-// flex
+/* ==========================================================================
+  Helper Classes
+   ========================================================================== */
+/* Flex */
 .flex {
     display: flex;
     &-jc-c {
@@ -70,7 +76,7 @@ img {
     }
 }
 
-// grid
+/* Grid */
 .grid {
     display: grid;
     &-pi-c {
@@ -85,7 +91,7 @@ img {
     display: none;
 }
 
-// current 
+/* Current */
 .current {
     font-weight: 700;
 }

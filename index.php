@@ -33,6 +33,7 @@
     </head>
     <body>
         <?php include ($_SERVER['DOCUMENT_ROOT'] . '/JamesFineSpirit/includes/index-header.inc.php'); ?>
+            <!-- Main section-->
         <main class="main" role="main" id="main">
             <section class="products">
                 <div class="products__background">

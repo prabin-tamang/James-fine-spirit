@@ -1,9 +1,16 @@
 @import "variables";
-// media query
-// medium - 640px - 40em
-// large - 1024px - 64em
-// x large - 1400px - 87.5em
-// mobile 
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/**
+ * Styles
+ * small - 464px - 29em
+ * medium - 640px - 40em
+* tablets - 768px - 48em
+ * large - 1024px - 64em
+ * x large - 1400px - 87.5em
+ * x x large - 2000px - 125em
+ */ 
 h1 {
     font-size: 1.383em;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
@@ -17,7 +24,9 @@ h3 {
     font-size: 1.138em;
 }
 
-// 
+
+/* Small
+   ========================================================================== */
 @media screen and (min-width: 29em) {
     main {
         .products {
@@ -31,7 +40,10 @@ h3 {
     }
 }
 
-@media screen and (min-width: 40em) {
+
+/* Medium 
+   ========================================================================== */
+@media screen and (min-width: 40em) {  
     h1 {
         font-size: 1.802em;
     }
@@ -103,7 +115,7 @@ h3 {
             padding-bottom: 4em;
         }
     }
-    // products page
+  /* Product Page*/
     .twoCol {
         .newsletter {
             &__background {
@@ -122,7 +134,7 @@ h3 {
             }
         }
     }
-    // findus page
+    /* Find Us page */
     .contactInfo {
         &__background {
             grid-template-columns: 1fr 1fr;
@@ -140,6 +152,8 @@ h3 {
     }
 }
 
+/* Tablets
+   ========================================================================== */
 @media screen and(min-width: 48em) {
     .width {
         max-width: 680px;
@@ -177,7 +191,10 @@ h3 {
     }
 }
 
+/* Desktop
+   ========================================================================== */
 @media screen and(min-width: 64em) {
+   /* Class to change width on different devices */
     .width {
         width: 100%;
         max-width: 920px;
@@ -185,7 +202,11 @@ h3 {
     }
 }
 
+
+/* Desktop- large
+   ========================================================================== */
 @media screen and (min-width: 87.5em) {
+    /* Skip to content when pressing TAB for accesbility */
     .c-skip-to {
         display: block;
     }
@@ -203,7 +224,7 @@ h3 {
         max-width: 1000px;
         margin: 0 auto;
     }
-    // header
+    /* Header */
     .header {
         background: url(../images/barrel.jpg) no-repeat;
         background-size: cover;
@@ -326,7 +347,7 @@ h3 {
             }
         }
     }
-    // main
+   /* Main  */
     main {
         .products {
             padding: 0;
@@ -374,7 +395,7 @@ h3 {
             }
         }
     }
-    // footer
+    /* Footer */
     .footer {
         background: $secondary-black;
         &__container {
@@ -398,7 +419,7 @@ h3 {
         font-size: .875em;
         padding: 0;
     }
-    // products page
+    /* Products Page */
     .twoCol {
         &__background {
             display: grid;
@@ -416,7 +437,7 @@ h3 {
             }
         }
     }
-    // find us page
+    /* Find Us Page */
     .contactInfo {
         &__background {
             padding: 4em 0;
@@ -448,7 +469,7 @@ h3 {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
     }
-    // gallery page
+    /* Gallery Page */
     .gallery {
         padding: 0;
         &__container {
@@ -516,6 +537,8 @@ h3 {
     }
 }
 
+/* Desktop- x large
+   ========================================================================== */
 @media screen and (min-width: 125em) {
     h1 {
         font-size: 3.052em;
