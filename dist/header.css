@@ -1,0 +1,194 @@
+.header {
+  background: url(../images/barrel.jpg) no-repeat;
+  background-size: cover;
+  background-position: 40% 100%;
+}
+
+.header .c-skip-to {
+  display: none;
+}
+
+.header .overlay {
+  position: absolute;
+  opacity: 0;
+  top: 6.825em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#292929), to(transparent));
+  background-image: linear-gradient(#292929, transparent);
+  z-index: 20;
+}
+
+.header__mobile {
+  background: #FFFFFF;
+  padding: 1.625em;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 300;
+  width: calc(100% - 3em);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 1.5em;
+}
+
+.header__mobile a {
+  color: #292929;
+  padding: .625em;
+  padding: 1.5em 0;
+  display: block;
+  text-align: center;
+}
+
+.header.open .overlay {
+  display: block;
+}
+
+.header.open .navigation__menu > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .navigation__menu > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .navigation__menu > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header #checkDate {
+  background-color: #FCBE00;
+  color: #292929;
+  padding: .5em 1.5em;
+  text-decoration: underline;
+}
+
+.header #checkDate::before {
+  content: url(../images/location.png);
+  margin-right: .5em;
+}
+
+.header .navigation {
+  position: relative;
+  padding: 1em 1.5em;
+  background: #202020;
+}
+
+.header .navigation__desktopNav {
+  display: none;
+}
+
+.header .navigation__menu span {
+  height: 2px;
+  display: block;
+  width: 26px;
+  border-radius: 18px;
+  background: #FFFFFF;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
+}
+
+.header .navigation__menu span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.header .hero {
+  padding: 4em 1.5em;
+  padding-bottom: 8em;
+  position: relative;
+}
+
+.header .hero__content h1 {
+  color: #FFFFFF;
+  letter-spacing: -.20px;
+  margin-bottom: .2em;
+}
+
+.header .hero__content span {
+  color: #FCBE00;
+  display: block;
+}
+
+.header .hero__content p {
+  margin-bottom: 2em;
+  max-width: 35ch;
+}
+
+.header .hero__content a {
+  font-size: .75em;
+  background: #FCBE00;
+  padding: .7em 1.8em;
+  display: inline-block;
+  margin-right: 1.5em;
+  border-radius: 50px;
+  -webkit-filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
+          filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px #292929;
+}
+
+.header .hero__content a:last-child {
+  background: #FFFFFF;
+  margin: 0;
+  color: #292929;
+  text-shadow: none;
+}
+
+.header .hero__info {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  background: #292929;
+  color: #FFFFFF;
+  padding: 1.5em 2em;
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 6px 11px rgba(138, 138, 138, 0.161));
+          filter: drop-shadow(0px 6px 11px rgba(138, 138, 138, 0.161));
+}
+
+.header .hero__container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-size: .65em;
+  grid-gap: 3em;
+  text-align: center;
+  color: #A9A9A9;
+}
+
+.header .hero__container span {
+  line-height: 1.5;
+  max-width: 10em;
+}
+
+.header .hero__container span:nth-child(1):before {
+  content: url(../images/beer.svg);
+  display: block;
+  margin-bottom: .5em;
+}
+
+.header .hero__container span:nth-child(2):before {
+  content: url(../images/wheat.svg);
+  display: block;
+  margin-bottom: .5em;
+}
+
+.header .hero__container span:nth-child(3):before {
+  content: url(../images/blood-drop.svg);
+  display: block;
+  margin-bottom: .5em;
+}
+
+.header .hero__container span:nth-child(4):before {
+  content: url(../images/factory.svg);
+  display: block;
+  margin-bottom: .5em;
+}
+/*# sourceMappingURL=header.css.map */

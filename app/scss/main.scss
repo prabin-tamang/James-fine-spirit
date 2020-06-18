@@ -1,0 +1,447 @@
+@import "variables";
+main {
+    .products {
+        background: $light-black;
+        padding: 0 1.5em;
+        padding-top: 10em;
+        padding-right: 0;
+        padding-bottom: 1em;
+        h2 {
+            color: $white;
+            span {
+                display: block;
+                letter-spacing: .50em;
+                font-size: .3em;
+                text-transform: uppercase;
+                color: $primary-yellow;
+            }
+        }
+        &__container {
+            grid-template-columns: repeat(1, .6fr);
+            justify-content: center;
+            overflow-y: hidden;
+            grid-column-gap: 8em;
+            padding: 2em 1.5em;
+            h3 {
+                color: $white;
+                margin-bottom: .5em;
+                line-height: 1.5;
+            }
+        
+            span:nth-child(2) {
+                color: $gray;
+                display: block;
+                margin-bottom: .8em;
+                font-size: .85em;
+            }
+            strong {
+                color: $white;
+            }
+            a {
+                color: $primary-yellow;
+                grid-column: 1/-1;
+                position: relative;
+            }
+            a::after {
+                content: url(../images/arrow-right.svg);
+                position: absolute;
+                bottom: -6px;
+                transition: transform 0.3s ease-out;
+            }
+            a:hover::after {
+                transform: translateX(4px);
+            }
+        }
+        &__item {
+            text-align: center;
+            padding: 2em 0;
+            position: relative;
+        }
+        &__overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            cursor: pointer;
+            a {
+                background-color: $primary-yellow;
+                color: $white;
+                font-size: .878em;
+                margin-top: 11.5em;
+                padding: .8em 1.5em;
+                display: inline-block;
+                width: 100%;
+                //    border-radius: 50px;
+                filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
+            }
+            a::after {
+                content: "";
+            }
+        }
+        &__overlay:hover {
+            opacity: 1;
+        }
+        &__desc {
+            padding: 1.5em 0;
+            text-align: left;
+            strong::before {
+                content: "£ ";
+                white-space: pre;
+            }
+        }
+    }
+    .discover {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        background: url(../images/discover-mobile.png);
+        background-size: cover;
+        background-position: top;
+        padding-bottom: 4em;
+        h2 {
+            span {
+                display: block;
+                letter-spacing: .50em;
+                font-size: .3em;
+                text-transform: uppercase;
+                color: $primary-yellow;
+            }
+            color: $white;
+            margin-bottom: .5em;
+        }
+        &__container {
+            padding: 3em 0;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 3em;
+            h3 {
+                color: $white;
+                margin-bottom: .5em;
+                display: inline-block;
+            }
+        }
+        &__craftBeer,
+        &__payments,
+        &__delivery {
+            grid-template-columns: .1fr 1fr;
+            grid-column-gap: 1.5em;
+        }
+    }
+    .newsletter {
+        background: $primary-yellow;
+        padding: 2.5em 1.5em;
+        padding-bottom: 0;
+        &__signUp {
+           padding-bottom: 2.5em;
+            p {
+                color: $yellow-gray;
+            }
+        }
+        h2 {
+            color: $white;
+        }
+        h3 {
+            color: $white;
+            margin-bottom: .5em;
+            ;
+        }
+        form {
+            padding-top: 2em;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            input {
+                padding: 1.1em 1.5em;
+                margin: 0;
+                border: 0;
+                border-radius: 0;
+                font-size: .875em;
+            }
+            button {
+                padding: 1.1em 2em;
+                margin: 0;
+                border: 0;
+                background: $light-black;
+                color: $white;
+                font-size: .875em;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// products page main
+.delivery {
+    background-color: $primary-yellow;
+    text-align: center;
+    padding: .5em 1.5em;
+    span::before {
+        content: url(../images/delivery.svg);
+        margin-right: 1em;
+    }
+}
+
+.twoCol {
+    display: block;
+    background: $light-black;
+    color: $white;
+    padding: 2em 1.5em;
+    padding-bottom: 0;
+    &__background {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    // background-color: $light-black;
+    aside {
+        h2 {
+            span {
+                display: block;
+                letter-spacing: .50em;
+                font-size: .3em;
+                text-transform: uppercase;
+                color: $primary-yellow;
+            }
+        }
+    }
+    &__filter {
+        padding-top: 4em;
+        font-size: .75em;
+        border-radius: 8px;
+        h2 {
+            letter-spacing: .100em;
+        }
+    }
+    &__container {
+        padding: 1em 0;
+        li {
+            border: .5px solid #484848;
+            padding: .5em 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            &:not(:last-child) {
+                margin-right: .7em;
+                margin-bottom: 1.5em;
+            }
+        }
+        li:hover {
+            background-color: $primary-yellow;
+            transition: .5s ease-in-out;
+            border: 0;
+        }
+    }
+    .productList {
+        padding: 0;
+        >h3 {
+            margin-bottom: 3em;
+            padding: .2em 0;
+            border-bottom: 1px solid #484848;
+        }
+        h2 {
+            margin-bottom: .5em;
+        }
+        p {
+            margin-bottom: 3em;
+        }
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5em;
+            padding-bottom: 2em;
+            // grid-gap: 1.5em;
+            grid-row-gap: 6em;
+        
+            span:nth-child(2) {
+                color: $gray;
+                display: block;
+                margin-bottom: .8em;
+                font-size: .75em;
+            }
+            h3 {
+                margin-bottom: .8em;
+                line-height: 1.5;
+            }
+        }
+        &__desc {
+            padding: 1em 0;
+            text-transform: lowercase;
+            margin-top: .8em;
+            //  padding: 1.5em 2em;
+            // border-top: 1px solid #363636;
+            strong::before {
+                content: "£ ";
+                white-space: pre;
+            }
+        }
+        &__item {
+            position: relative;
+            // padding: 1.5em 0;
+            //  border: 1px double #363636;  
+            // border-radius: 8px;
+        }
+        &__overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            text-align: center;
+            cursor: pointer;
+            // desktop overlay
+            &__overlay:hover {
+                opacity: 1;
+            }
+            a {
+                background-color: $primary-yellow;
+                color: $white;
+                margin-top: 8em;
+                font-size: .878em;
+                width: 100%;
+                padding: .6em 1.5em;
+                display: inline-block;
+                //    border-radius: 50px;
+                filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
+            }
+        }
+    }
+    .newsletter {
+        grid-column: 1/-1;
+        margin: 0 calc(-50vw + 50%);
+        background: $primary-yellow;
+        &__background {
+            grid-template-columns: 1fr;
+        }
+        padding: 2.5em 1.5em;
+        padding-bottom: 2.5em;
+        &__signUp {
+            padding: 2em 0;
+            padding-bottom: 0;
+            p {
+                color: $yellow-gray;
+            }
+        }
+        h2 {
+            color: $white;
+        }
+        h3 {
+            color: $white;
+            margin-bottom: .5em;
+            ;
+        }
+        form {
+            padding-top: 2em;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            input {
+                padding: 1.1em 1.5em;
+                margin: 0;
+                border: 0;
+                border-radius: 0;
+                font-size: .875em;
+            }
+            button {
+                padding: 1.1em 2em;
+                margin: 0;
+                border: 0;
+                background: $light-black;
+                color: $white;
+                font-size: .875em;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// find us page
+.contactInfo {
+    padding: 0;
+    background: $light-black;
+    color: $white;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+    &__social {
+        a {
+            &:not(:last-child) {
+                margin-right: .8em;
+            }
+        }
+    }
+    &__intro {
+        h1 {
+            margin-bottom: .5em;
+        }
+        p {
+            color: $primary-yellow;
+        }
+    }
+    &__container {
+        margin-top: 3em;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2em;
+        padding: 0 1.5em;
+        h2 {
+            margin-bottom: .5em;
+        }
+        address {
+            color: $gray;
+            font-style: normal;
+            font-size: .875em;
+            line-height: 1.5;
+        }
+    }
+}
+
+.brewery {
+    background: $light-black;
+    color: $white;
+    &__background {
+        background: $light-black;
+        padding: 3em 1.5em;
+    }
+    &__bookTours {
+        margin-bottom: 4em;
+        h2 {
+            margin-bottom: .8em;
+        }
+        a {
+            color: $primary-yellow;
+            position: relative;
+        }
+        a::after {
+            content: url(../images/arrow-right.svg);
+            position: absolute;
+            bottom: -9px;
+            transition: transform 0.3s ease-out;
+        }
+        a:hover::after {
+            transform: translateX(4px);
+        }
+    }
+    &__tourInfo {
+        h3,
+        h4 {
+            margin-bottom: .5em;
+        }
+        p {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+// gallery page
+.gallery {
+    background: $light-black;
+    &__container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        img {
+            object-fit: cover;
+        }
+    }
+}

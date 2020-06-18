@@ -1,0 +1,173 @@
+@import "variables";
+.header {
+    background: url(../images/barrel.jpg) no-repeat;
+    background-size: cover;
+    background-position: 40% 100%;
+    .c-skip-to {
+        display: none;
+    }
+    .overlay {
+        position: absolute;
+        opacity: 0;
+        top: 6.825em;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient($secondary-black, transparent);
+        z-index: 20;
+    }
+    &__mobile {
+        background: $white;
+        padding: 1.625em;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 300;
+        width: calc(100% - 3em);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.5em;
+        a {
+            color: $secondary-black;
+            padding: .625em;
+            padding: 1.5em 0;
+            display: block;
+            text-align: center;
+        }
+    }
+    &.open {
+        .overlay {
+            display: block;
+        }
+        .navigation__menu {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    #checkDate {
+        background-color: $primary-yellow;
+        color: $secondary-black;
+        padding: .5em 1.5em;
+        text-decoration: underline;
+    }
+    #checkDate::before {
+        content: url(../images/location.png);
+        margin-right: .5em;
+    }
+    .navigation {
+        position: relative;
+        padding: 1em 1.5em;
+        background: $light-black;
+        // hide desktop nav 
+        &__desktopNav {
+            display: none;
+        }
+        &__menu {
+            span {
+                height: 2px;
+                display: block;
+                width: 26px;
+                border-radius: 18px;
+                background: $white;
+                transition: all 300ms ease-in-out;
+                transform-origin: 3px 1px;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    .hero {
+        // background-size: 250%;
+        padding: 4em 1.5em;
+        padding-bottom: 8em;
+        position: relative;
+        &__content {
+            // padding-bottom: 2em;
+            h1 {
+                // font-size: 1.64em;
+                color: $white;
+                letter-spacing: -.20px;
+                margin-bottom: .2em;
+            }
+            span {
+                color: $primary-yellow;
+                display: block;
+            }
+            p {
+                margin-bottom: 2em;
+                max-width: 35ch;
+            }
+            a {
+                font-size: .75em;
+                background: $primary-yellow;
+                padding: .7em 1.8em;
+                display: inline-block;
+                margin-right: 1.5em;
+                border-radius: 50px;
+                filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
+                color: $white;
+                text-shadow: 1px 1px 1px $secondary-black;
+            }
+            a:last-child {
+                background: $white;
+                margin: 0;
+                color: $secondary-black;
+                text-shadow: none;
+            }
+        }
+        &__info {
+            position: absolute;
+            // border-radius: 10px;
+            bottom: -120px;
+            left: 0;
+            background: $secondary-black;
+            color: $white;
+            padding: 1.5em 2em;
+            width: 100%;
+            // margin: 0 1.5em;
+            // border-radius: 10px;
+            filter: drop-shadow(0px 6px 11px rgba(138, 138, 138, 0.161));
+        }
+        &__container {
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr 1fr;
+            // grid-gap: 4em;
+            font-size: .65em;
+            grid-gap: 3em;
+            text-align: center;
+            color: $gray;
+            span {
+                line-height: 1.5;
+                max-width: 10em;
+            }
+            span:nth-child(1):before {
+                content: url(../images/beer.svg);
+                display: block;
+                margin-bottom: .5em;
+            }
+            span:nth-child(2):before {
+                content: url(../images/wheat.svg);
+                display: block;
+                margin-bottom: .5em;
+            }
+            span:nth-child(3):before {
+                content: url(../images/blood-drop.svg);
+                display: block;
+                margin-bottom: .5em;
+            }
+            span:nth-child(4):before {
+                content: url(../images/factory.svg);
+                display: block;
+                margin-bottom: .5em;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.footer h3 {
+  color: #FFFFFF;
+  margin-bottom: .5em;
+}
+
+.footer address {
+  color: #A9A9A9;
+  font-style: normal;
+  font-size: .875em;
+  line-height: 1.5;
+}
+
+.footer p {
+  font-size: .875em;
+}
+
+.footer__container {
+  padding: 4em 1.5em;
+  padding-bottom: 0;
+  background: #292929;
+  -ms-grid-rows: auto 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr 1fr;
+  grid-gap: 3em;
+}
+
+.footer__bottom {
+  padding: 1em 1.5em;
+  background: #FCBE00;
+}
+
+.footer__bottom small {
+  display: block;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.footer__bottom small:last-child {
+  display: none;
+}
+
+.footer__bottom strong {
+  font-size: .85em;
+  display: block;
+}
+
+.footer__social a:not(:last-child) {
+  margin-right: .8em;
+}
+/*# sourceMappingURL=footer.css.map */

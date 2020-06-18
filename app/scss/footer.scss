@@ -1,0 +1,47 @@
+@import "variables";
+.footer {
+    h3 {
+        color: $white;
+        margin-bottom: .5em;
+    }
+    address {
+        color: $gray;
+        font-style: normal;
+        font-size: .875em;
+        line-height: 1.5;
+    }
+    p {
+        font-size: .875em;
+    }
+    &__container {
+        padding: 4em 1.5em;
+        padding-bottom: 0;
+        background: $secondary-black;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        grid-gap: 3em;
+    }
+    &__bottom {
+        padding: 1em 1.5em;
+        background: $primary-yellow;
+        small {
+            display: block;
+            margin-bottom: .5em;
+            text-align: center;
+        }
+
+        small:last-child{
+            display: none;
+        }
+        strong {
+            font-size: .85em;
+            display: block;
+        }
+    }
+    &__social {
+        a {
+            &:not(:last-child) {
+                margin-right: .8em;
+            }
+        }
+    }
+}
