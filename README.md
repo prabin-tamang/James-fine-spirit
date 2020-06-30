@@ -1,2 +1,2 @@
 # James-fine-spirit
-A small business that specializes in craft beer and spirits.
+This is a project that I did in my masters program which I revisited and improved again. This website is a simple concept website for a small business which specalises in craft beer and spirits. This project demonstrates some of the issues involved with the development of small websites including: the design process, colour and typography, site structure and navigation, standards compliant and semantic coding.
